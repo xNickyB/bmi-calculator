@@ -3,6 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 import 'materialize-css/dist/css/materialize.min.css';
 import './App.css';
 import BmiForm from '../BmiForm/BmiForm';
+import FlavorForm from '../BmiForm/FlavorForm';
+import DropDown from '../BmiForm/DropDown';
 import Info from '../Info/Info';
 import Bar from '../Bar/Bar';
 import { getData, storeData } from '../../helpers/localStorage';
@@ -20,6 +22,7 @@ const App = () => {
     setData(newData);
   }, [state]);
 
+  
   const handleChange = val => {
     let heightInM = val.height / 100;
     val.bmi = (val.weight / (heightInM * heightInM)).toFixed(2);
@@ -45,15 +48,17 @@ const App = () => {
   return (
     <div className='container'>
       <div className='row center'>
-        <h1 className='white-text'> BMI Tracker </h1>
+      <h1> Calculate Hatchery Density </h1>
       </div>
       <div className='row'>
-        <div className='col m12 s12'>
-          <BmiForm change={handleChange} />
-          <Bar labelData={data.date} bmiData={data.bmi} />
+        <div style={App.rowC}>
+          {/* <BmiForm change={handleChange} /> */}
+          <DropDown />
+          <DropDown />
+          {/* <Bar labelData={data.date} bmiData={data.bmi} /> */}
           <div>
             <div className='row center'>
-              <h4 className='white-text'>7 Day Data</h4>
+              <h4 className='white-text'>Data</h4>
             </div>
             <div className='data-container row'>
               {state.length > 0 ? (

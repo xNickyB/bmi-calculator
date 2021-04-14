@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../App/App.css';
+import FlavorForm from './FlavorForm';
 
 const initialValues = {
 	weight: '',
@@ -33,7 +34,7 @@ const BmiForm = ({ change }) => {
 		<>
 			<div className="row">
 				<div className="col m6 s12">
-					<label htmlFor="weight">Weight (in kg)</label>
+					<label htmlFor="weight">Larvae Mass (in kg)</label>
 					<input
 						id="weight"
 						name="weight"
@@ -59,6 +60,8 @@ const BmiForm = ({ change }) => {
 						onChange={handleChange}
 					/>
 				</div>
+				<div>FlavorForm</div>
+				
 			</div>
 			<div className="center">
 				<button

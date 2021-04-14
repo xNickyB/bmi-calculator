@@ -1,5 +1,5 @@
 body {
-  background-color: #172b4d;
+  background-color: #e57c58;
 }
 
 input {
@@ -98,4 +98,16 @@ label {
 
 .delete-btn:focus {
   background-color: #e74c3c;
+}
+
+.headline {
+  text-align: 'center';
+  font-weight: 'bold';
+  font-size: 18;
+  margin-top: 0;
+  width: 200;
+}
+
+.rowC {
+  display:flex; flex-direction:row;
 }
