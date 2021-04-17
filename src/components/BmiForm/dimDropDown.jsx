@@ -12,20 +12,24 @@ const customStyles = {
     option: (provided, state) => ({
       ...provided,
       borderBottom: '2px  blue',
-      color: state.isSelected ? '#3f51b5' : 'black',
-      backgroundColor: state.isSelected ? '#3f51b5' : 'white'
+      color: state.isSelected ? 'e74c3c' : 'black',
+      backgroundColor: state.isSelected ? '#32408f': 'white',
+      opacity: 0.5
     }),
     control: (provided) => ({
       ...provided,
-      marginTop: "5%",
+      marginTop: "10%",
     })
   }
 
-const DropDown = () => (
-    <Select className="col-md-8 col-offset-4"
+
+
+const dimDropDown = () => (
+    <Select className="row justify-space-around"
     styles = { customStyles }
+    placeholder = "Feed Mass (Kg)"
     options = { options }
   />
 )
 
-export default DropDown;
+export default dimDropDown;
